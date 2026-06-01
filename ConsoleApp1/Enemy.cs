@@ -6,16 +6,18 @@ namespace ConsoleApp1
 {
     public class Enemy
     {
-        public string Name { get; set; }
-        public int Health { get; set; }
-
-        public int Damage { get; set; }
+        protected string Name { get; set; }
+        protected int Health { get; set; }
+        protected int Damage { get; set; }
         
         public void recieveDamage(int dmg)
         {
             Health -= dmg;
         }
-
+        public int attack()
+        {
+            return Damage;
+        }
         
     }
 
@@ -29,7 +31,12 @@ namespace ConsoleApp1
             Name = name;
             Health = health;
             Damage = damageOutput;
-            Console.WriteLine($"A {enemyType} has appeared named {Name}");
+            Console.WriteLine($"A {enemyType} has appeared named {Name}\n");
+        }
+        public int attack()
+        {
+            Console.WriteLine($"Goblin {Name} attacks!");
+            return Damage;
         }
             
     }

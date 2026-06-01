@@ -6,24 +6,37 @@ namespace ConsoleApp1
 {
     public class Player
     {
-        public string name = "playa";
-        int health = 100;
-        private int Health { get { return health; } set { health = value; } }
-        public int attackDamage = 10;
-        public int attack()
+  
+
+        public string Name{ get; set; }
+        private int Health { get; set; }
+        private int Damage{ get; set; }
+
+
+        public Player(string name="ADAL", int health= 100, int damage=10)
         {
-            Console.WriteLine($"You just attacked {attackDamage}");
-            return attackDamage;
+            Name = name;
+            Health = health;
+            Damage= damage;
+
         }
 
-        public void playerStats()
+        public int attack()
         {
-            Console.WriteLine($"NAME: {name}, HEALTH: {health}, ATTACK DMG: {attackDamage}");
+            Console.WriteLine($"You just attacked {Damage}");
+            return Damage;
         }
+
         public void recieveDamage(int dmg)
         {
             Health-= dmg;
         }
+
+        public void playerStats()
+        {
+            Console.WriteLine($"NAME: {Name}, HEALTH: {Health}, ATTACK DMG: {Damage}");
+        }
+
 
     }
 
