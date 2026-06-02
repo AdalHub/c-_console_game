@@ -13,7 +13,7 @@ class Program
         Console.WriteLine($"Welcome to console game, {myPlayer.Name}");
         
         
-        Goblin goblin1 = new Goblin("grichard", 100, 10);
+        Enemy goblin1 = new Goblin("grichard", 100, 10);
         Console.WriteLine("Will you attack? \n For attack enter: A");
         string userInput = Console.ReadLine();
         if (userInput == "A")

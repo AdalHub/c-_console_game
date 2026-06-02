@@ -14,7 +14,7 @@ namespace ConsoleApp1
         {
             Health -= dmg;
         }
-        public int attack()
+        public virtual int attack()
         {
             return Damage;
         }
@@ -33,7 +33,7 @@ namespace ConsoleApp1
             Damage = damageOutput;
             Console.WriteLine($"A {enemyType} has appeared named {Name}\n");
         }
-        public int attack()
+        public override int attack()
         {
             Console.WriteLine($"Goblin {Name} attacks!");
             return Damage;
