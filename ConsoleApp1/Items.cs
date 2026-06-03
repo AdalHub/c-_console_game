@@ -29,14 +29,16 @@ namespace ConsoleApp1
         int PurchaseCost { get; set; }
         int SellCost { get; set; }
         Qualities Quality { get; set; }
+
+        int use();
     }
 
     enum Qualities
     {
-        Low,
-        Medium,
-        High,
-        STier
+        Low = 1,
+        Medium = 2,
+        High= 4,
+        STier= 8,
     }
 
 

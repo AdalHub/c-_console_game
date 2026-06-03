@@ -22,5 +22,21 @@ namespace ConsoleApp1
             SellCost = sellCost;
             Quality = quality;
         }
+
+        public int use()
+        {
+            if(Quantity > 0)
+            {
+                int totalHealed = 16 * (int)Quantity ;
+
+                Console.WriteLine("You healed ");
+                return totalHealed;
+            }
+            else
+            {
+                Console.WriteLine("Out of juice");
+                return 0;
+            }
+        }
     }
 }
